@@ -7,7 +7,7 @@ import { Link, Navigate } from "react-router-dom";
 export const Navbar = () => {
 	return (
 		<div className="container-fluid">
-			<nav className="navbar d-flex justify-content-between rounded-bottom shadow-lg" style={{backgroundColor:"black"}}>
+			<nav className="d-flex justify-content-between rounded-bottom shadow-lg" style={{backgroundColor:"black", }}>
 				<div className="ms-4">
 					<img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Star_Wars_Logo.svg" alt="Logo" style={{ width: "90px" }} className="d-inline-block align-text-top" onClick={Navigate("/")}/>
 				</div>
