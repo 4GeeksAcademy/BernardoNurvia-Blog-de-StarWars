@@ -8,12 +8,12 @@ import injectContext from "./store/appContext";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import People from "./component/People";
-import Details from "./component/Details";
+import { Details } from "./component/Details";
+import { Vehicles } from "./component/Vehicles";
+import { Planets } from "./component/Planets";
+import { AllFavorites } from "./component/AllFavorites";
 
-//create your first component
 const Layout = () => {
-	//the basename is used when your project is published in a subdirectory and not in the root of the domain
-	// you can set the basename on the .env file located at the root of this project, E.g: BASENAME=/react-hello-webapp/
 	const basename = process.env.BASENAME || "";
 
 	return (
@@ -25,6 +25,9 @@ const Layout = () => {
 						<Route path="/" element={<Home />} />
 						<Route path="/people" element={<People />} />
 						<Route path="/details" element={<Details />} />
+						<Route path="/vehicles" element={<Vehicles />} />
+						<Route path="/planets" element={<Planets />} />
+						<Route path="/all-favorites" element={<AllFavorites />} />
 						<Route path="*" element={<h1>Not found!</h1>} />
 					</Routes>
 					<Footer />

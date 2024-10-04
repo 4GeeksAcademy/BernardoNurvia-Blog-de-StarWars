@@ -1,10 +1,7 @@
 import React from 'react'
 
 const Details = () => {
-    // fetch("https://www.swapi.tech/api/planets/1/")
-    //     .then(res => res.json())
-    //     .then(data => console.log(data))
-    //     .catch(err => console.error(err))
+
     return (
         <div><div className="card mb-3" style={{ maxWidth: "540px;" }}>
             <div className="row g-0">

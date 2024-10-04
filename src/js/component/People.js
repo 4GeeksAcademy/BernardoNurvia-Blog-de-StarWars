@@ -1,16 +1,29 @@
-import React from 'react';
+import React, { useContext, useState, useEffect } from 'react';
+import { Context } from "../store/appContext";
+import  "../../styles/card.css"
 
 const People = () => {
+  const { store, actions } = useContext(Context);
+  const [people, setPeople] = useState([]);
+
+  useEffect(() => {
+    fetch("https://www.swapi.tech/api/people")
+      .then(res => res.json())
+      .then(data => setPeople(data.results))
+      .catch(err => console.error(err));
+  }, []);
+
   return (
-    <div>
-      <div className="card" style={{ width: '18rem' }}>
-        <img src="" className="card-img-top" alt="..." />
-        <div className="card-body">
-          <h5 className="card-title">Card title</h5>
-          <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" className="btn btn-primary">Go somewhere</a>
+    <div className="row  g-4">
+      {people.map((person, index) => (
+        <div key={index} className="card scroll-container" style={{ width: '18rem' }}>
+          <img src={`https://starwars-visualguide.com/assets/img/characters/${index + 1}.jpg`} className="card-img-top" alt={person.name} />
+          <div className="card-body">
+            <h5 className="card-title">{person.name}</h5>
+            <a href="#" className="btn btn-primary">Details</a>
+          </div>
         </div>
-      </div>
+      ))}
     </div>
   );
 };
