@@ -21,7 +21,12 @@ export const Vehicles = () => {
         <img src={`https://starwars-visualguide.com/assets/img/vehicles/${vehicle.uid}.jpg`} className="card-img-top" alt={vehicle.name} />
         <div className="card-body">
           <h5 className="card-title">{vehicle.name}</h5>
-          <a href="#" className="btn btn-primary">Details</a>
+          <div className="d-flex justify-content-around">
+              <a href="#" className="btn btn-primary">Details</a>
+
+              <button className="btn btn-primary"><i className="bi bi-heart"></i></button>
+
+            </div>
         </div>
       </div>
     ))}

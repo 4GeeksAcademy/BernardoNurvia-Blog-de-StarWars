@@ -20,7 +20,12 @@ const Planets = () => {
           <img src={`https://starwars-visualguide.com/assets/img/planets/${planet.uid}.jpg`} onError={(e) => e.target.src='https://starwars-visualguide.com/assets/img/placeholder.jpg'} className="card-img-top" alt={planet.name} />
           <div className="card-body">
             <h5 className="card-title">{planet.name}</h5>
-            <a href="#" className="btn btn-primary">Details</a>
+            <div className="d-flex justify-content-around">
+              <a href="#" className="btn btn-primary">Details</a>
+
+              <button className="btn btn-primary"><i className="bi bi-heart"></i></button>
+
+            </div>
           </div>
         </div>
       ))}
