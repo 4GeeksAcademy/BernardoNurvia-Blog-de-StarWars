@@ -1,11 +1,18 @@
 .scroll-container {
     display: flex;
-    overflow-x: auto;
+    overflow-x:  auto;
+  
     white-space: nowrap;
 }
 
 .scroll-item {
     flex: 0 0 auto;
     width: 18rem; /* Ajusta el ancho según tus necesidades */
-    margin-right: 10px; /* Espacio entre elementos */
+   
+}
+.golden-shadow {
+   
+    background-color:rgba(128, 90, 136, 0.925);
+    box-shadow: 10px 10px 20px rgba(255, 215, 0, 0.7);
+    margin: 50px;
 }

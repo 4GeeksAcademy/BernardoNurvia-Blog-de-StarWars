@@ -20,7 +20,10 @@ const Layout = () => {
 		<div>
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
-					<Navbar />
+					<div className="">
+						<Navbar />
+					</div>
+
 					<Routes>
 						<Route path="/" element={<Home />} />
 						<Route path="/people" element={<People />} />
