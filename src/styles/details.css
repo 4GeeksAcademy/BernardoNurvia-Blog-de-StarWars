@@ -1,0 +1,25 @@
+.body-info{
+    margin: auto;
+}
+.header{
+    display: flex;
+    margin-top: 80px;
+}
+.img-details{
+    width: 300px;
+    margin-left: 15%;
+    margin-right: 8%;
+    margin-bottom: 3%;
+}
+
+.footer-details{
+    display: flex;
+    ;
+}
+p{
+    margin: auto;
+    text-align: center;
+}
+.button{
+    
+}
