@@ -10,7 +10,6 @@
     display: flex;
     overflow-x: auto;
     white-space: nowrap;
-    
     gap: 5px;
 }
 
@@ -33,13 +32,17 @@
 .body {
     background-image: url('https://wallpapercave.com/wp/wp4575212.jpg');
     padding-bottom: 5rem;
+    padding-top: 4rem;
+    
 }
 
 h2 {
     color: antiquewhite;
     text-shadow: 10px 10px 20px rgba(255, 215, 0, 0.7);
+    background: radial-gradient(circle, #ea5fff, #2f004571);
+   
+    width: 20%;
+    margin: auto;
 }
 
-.text-h2 {
-    padding-top: 4rem;
-}
+

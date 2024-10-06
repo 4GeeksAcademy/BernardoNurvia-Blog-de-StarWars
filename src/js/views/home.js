@@ -7,8 +7,8 @@ import Planets from "../component/Planets";
 export const Home = () => {
   
   return (
-    <div className="body mb-5">
-      <div className="text-center ">
+    <div className="body">
+      <div className="text-center h-2">
         <h2 className="text-h2">Characters</h2>
         <div className="scroll-container">
           <People />

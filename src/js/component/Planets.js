@@ -30,7 +30,7 @@ const Planets = () => {
   };
 
   return (
-    <div className="d-flex mb-5">
+    <div className="d-flex ">
       {planets.map((planet, index) => (
         <div key={index} className="card scroll-item golden-shadow" style={{ width: '18rem' }}>
           <img src={`https://starwars-visualguide.com/assets/img/planets/${planet.uid}.jpg`} onError={(e) => e.target.src = 'https://starwars-visualguide.com/assets/img/placeholder.jpg'} className="card-img-top" style={{ width: '286px', height: '286px', objectFit: 'fill' }} alt={planet.name} />
