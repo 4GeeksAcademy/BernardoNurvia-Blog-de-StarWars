@@ -19,14 +19,14 @@
 .scroll-item.paused {
     animation-play-state: paused;
 }
-@keyframes scroll {
+/* @keyframes scroll {
     0% {
         transform: translateX(100%);
     }
     100% {
         transform: translateX(-100%);
     }
-}
+} */
 .golden-shadow {
    
     background-color: antiquewhite;

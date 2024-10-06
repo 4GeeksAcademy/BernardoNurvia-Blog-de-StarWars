@@ -21,7 +21,7 @@ export const Home = () => {
 		<div className="body" >
 			<div className=" text-center mb-5">
 				<h2 className="text-h2" >Characters</h2>
-				<div className="scroll-container" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
+				<div className="scroll-container scroll-item.paused " onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
 					<People />
 				</div>
 				<h2>Vehicles</h2>

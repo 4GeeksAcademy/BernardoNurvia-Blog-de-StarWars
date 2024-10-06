@@ -1,4 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react';
+import { Link, useNavigate } from "react-router-dom";
 import { Context } from "../store/appContext";
 import "../../styles/card.css"
 
@@ -7,6 +8,16 @@ const People = () => {
   const { store, actions } = useContext(Context);
   const [people, setPeople] = useState([]);
   const [favoritesButton, setFavoritesButton] = useState([]);
+  const navigate = useNavigate()
+
+  const [isPaused, setIsPaused] = useState(false);
+  const handleMouseOver = () => {
+    setIsPaused(true);
+  };
+
+  const handleMouseOut = () => {
+    setIsPaused(false);
+  };
 
   useEffect(() => {
     fetch("https://www.swapi.tech/api/people")
@@ -15,16 +26,18 @@ const People = () => {
       .catch(err => console.error(err));
   }, []);
 
+  const handleDetailsClick = (uid) => {
+    navigate(`/details/${uid}`);
+  };
   return (
     <div className="d-flex">
       {people.map((person, index) => (
-        <div key={index} className="card scroll-item golden-shadow" style={{ width: '18rem' }}>
-          <img src={`https://starwars-visualguide.com/assets/img/characters/${index + 1}.jpg`} className="card-img-top" alt={person.name} />
+        <div key={index} className="card scroll-item  golden-shadow" style={{ width: '18rem' }}>
+          <img src={`https://starwars-visualguide.com/assets/img/characters/${person.uid}.jpg`} className="card-img-top" alt={person.name} />
           <div className="card-body">
             <h5 className="card-title">{person.name}</h5>
             <div className="d-flex justify-content-around">
-              <a href="#" className="btn btn-primary">Details</a>
-
+              <a href="#" className="btn btn-primary" onClick={()=> handleDetailsClick(person.uid)}>Details</a>
               <button className="btn btn-primary"><i className="bi bi-heart"></i></button>
 
             </div>
