@@ -5,44 +5,41 @@
     align-items: center;
     width: auto;
 }
+
 .scroll-container {
     display: flex;
-    overflow-x:  auto;
+    overflow-x: auto;
     white-space: nowrap;
+    
+    gap: 5px;
 }
+
 .scroll-item {
     flex: 0 0 auto;
-    width: 1rem; /* Ajusta el ancho según tus necesidades */
+    width: 18rem; /* Ajusta el ancho según tus necesidades */
     margin-right: 5px; /* Espacio entre elementos */
-    animation: scroll 10s linear infinite alternate;
 }
+
 .scroll-item.paused {
     animation-play-state: paused;
 }
-/* @keyframes scroll {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-} */
+
 .golden-shadow {
-   
     background-color: antiquewhite;
     box-shadow: 10px 10px 20px rgba(255, 215, 0, 0.7);
     margin: 5px;
 }
-.body{
+
+.body {
     background-image: url('https://wallpapercave.com/wp/wp4575212.jpg');
-    margin-bottom: 20rem;
+    padding-bottom: 5rem;
 }
-h2{
-    
+
+h2 {
     color: antiquewhite;
     text-shadow: 10px 10px 20px rgba(255, 215, 0, 0.7);
 }
-.text-h2{
+
+.text-h2 {
     padding-top: 4rem;
 }
-

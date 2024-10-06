@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from "react-router-dom";
-import PropTypes from 'prop-types';
+
 import "../../styles/details.css";
 
-const Details = props => {
+const DetailsVehicles = props => {
     const { id } = useParams();
-    const [person, setPerson] = useState(null);
+    const [vehicle, setVehicle] = useState(null);
     const [description, setDescription] = useState("");
 
     useEffect(() => {
-        fetch(`https://www.swapi.tech/api/people/${id}`)
+        fetch(`https://www.swapi.tech/api/vehicles/${id}`)
             .then(res => res.json())
             .then(data => {
-                setPerson(data.result.properties);
+                setVehicle(data.result.properties);
                 setDescription(data.result.description);
             })
             .catch(err => console.log(err));
@@ -25,12 +25,12 @@ const Details = props => {
             <div className="body-info">
                 <div className="header justify-content-around">
                     <div className="img-details ">
-                        <img src={`https://starwars-visualguide.com/assets/img/characters/${id}.jpg`} className="card-img-top img-fluid rounded-start" alt="`${person.name}`" />
+                        <img src={`https://starwars-visualguide.com/assets/img/vehicles/${id}.jpg`} className="card-img-top img-fluid rounded-start" alt="`${vehicle.name}`" />
                     </div>
                     <div className="text-details">
-                        {person ? (
+                        {vehicle ? (
                             <>
-                                <h1>{person.name}</h1>
+                                <h1>{vehicle.name}</h1>
                                 <h3>{description}</h3>
                             </>
                         ) : (
@@ -42,15 +42,15 @@ const Details = props => {
                 </div>
 
                 <div >
-                    {person ? (
+                    {vehicle ? (
                         <div className="footer-details">
-                            <p>Height:<br /> {person.height}</p>
-                            <p>Mass:<br />  {person.mass}</p>
-                            <p>Hair Color:<br />  {person.hair_color}</p>
-                            <p>Skin Color:<br />  {person.skin_color}</p>
-                            <p>Eye Color:<br />  {person.eye_color}</p>
-                            <p>Birth Year:<br />  {person.birth_year}</p>
-                            <p>Gender:<br />  {person.gender}</p>
+                            <p>Cargo Capacity:<br /> {vehicle.cargo_capacity}</p>
+                            <p>Consumables:<br />  {vehicle.consumables}</p>
+                            <p>Passengers:<br />  {vehicle.passengers}</p>
+                            <p>Created:<br />  {vehicle.created}</p>
+                            <p>Crew:<br />  {vehicle.crew}</p>
+                            <p>Model:<br />  {vehicle.model}</p>
+                            <p>Manufacturer:<br />  {vehicle.manufacturer}</p>
                         </div>
                     ) : (
                         <div class="spinner-border text-secondary" role="status">
@@ -68,6 +68,6 @@ const Details = props => {
     );
 }
 
-Details.propTypes = {}
 
-export default Details;
+
+export default DetailsVehicles;

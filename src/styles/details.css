@@ -1,25 +1,52 @@
+body{
+    background-image: url('https://wallpapercave.com/wp/wp4575212.jpg');
+   
+}
 .body-info{
     margin: auto;
-}
+    padding-top: 1%;
+    border: 1px;
+    border-radius: 5%;
+    width: 80%;
+    height: 50%;
+    margin-top: 80px;
+    position: relative;
+    background-color: rgba(240, 248, 255, 0.201);
+    box-shadow: 1px 1px 50px rgba(255, 215, 0, 0.7);
+    background-image: url(https://images.hdqwalls.com/download/abstract-galaxy-spiral-4k-jf-1600x900.jpg);
+  
+    }
 .header{
     display: flex;
-    margin-top: 80px;
+    margin-top: 10px;
+    color: antiquewhite;
+    text-shadow: 10px 10px 20px rgba(255, 215, 0, 0.7);
+    
 }
 .img-details{
     width: 300px;
-    margin-left: 15%;
+    margin-left: 8%;
     margin-right: 8%;
     margin-bottom: 3%;
+   
+    box-shadow: 1px 1px 50px rgba(255, 215, 0, 0.7);
 }
 
 .footer-details{
     display: flex;
-    ;
+    background-color: rgba(21, 51, 51, 0.613);
 }
 p{
     margin: auto;
     text-align: center;
+    color: rgb(253, 253, 253);
+    text-shadow: 10px 10px 20px rgba(255, 215, 0, 0.7);
+   
 }
 .button{
-    
+    margin-left: 45%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    box-shadow: 1px 1px 50px rgba(255, 215, 0, 0.7);
 }
+    
